@@ -1,10 +1,7 @@
 from langchain.utilities import SerpAPIWrapper
-
-
 class CustomSerpAPIWrapper(SerpAPIWrapper):
     def __init__(self):
         super(CustomSerpAPIWrapper, self).__init__()
-
     @staticmethod
     def _process_response(res: dict) -> str:
         """Process response from SerpAPI."""
@@ -41,4 +38,10 @@ def get_profile_url(name: str):
     """Searches for Linkedin or twitter Profile Page."""
     search = CustomSerpAPIWrapper()
     res = search.run(f"{name}")
+    # res = "https://twitter.com/billgates/with_replies"
+    # res = "https://twitter.com/elonmusk/with_replies"
     return res
+
+
+
+

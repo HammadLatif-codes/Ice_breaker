@@ -7,6 +7,8 @@ name = "pypi"
 langchain = "*"
 requests = "*"
 black = "*"
+tweepy = "*"
+python-dateutil = "*"
 
 [dev-packages]
 
